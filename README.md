@@ -1,5 +1,5 @@
 # Grasp-Anything
-This is the repository of the paper "Grasp-Anything: Large-scale Grasp Dataset from Foundation Models"
+This is the repository of the paper "Grasp-Anything++ Assignment"
 ## Table of contents
    1. [Installation](#installation)
    1. [Datasets](#datasets)
@@ -25,11 +25,7 @@ $ pip install -r requirements.txt
 - All datasets should be include in the following hierarchy:
 ```
 |- data/
-    |- cornell
-    |- grasp-anything
-    |- jacquard
-    |- OCID_grasp
-    |- VMRD
+    |- grasp-anything++
 ```
 
 ## Training
@@ -37,17 +33,9 @@ We use GR-ConvNet as our default deep network. To train GR-ConvNet on different 
 ```bash
 $ python train_network.py --dataset <dataset> --dataset-path <dataset> --description <your_description> --use-depth 0
 ```
-For example, if you want to train a GR-ConvNet on Cornell, use the following command:
+For example, if you want to train a GR-ConvNet on Grasp-Anything++, use the following command:
 ```bash
-$ python train_network.py --dataset cornell --dataset-path data/cornell --description training_cornell --use-depth 0
-```
-We also provide training for other baselines, you can use the following command:
-```bash
-$ python train_network.py --dataset <dataset> --dataset-path <dataset> --description <your_description> --use-depth 0 --network <baseline_name>
-```
-For instance, if you want to train GG-CNN on Cornell, use the following command:
-```bash
-python train_network.py --dataset cornell --dataset-path data/cornell/ --description training_ggcnn_on_cornell --use-depth 0 --network ggcnn
+$ python train_network.py --dataset grasp-anything++ --dataset-path data/grasp-anything++ --description training_cornell --use-depth 0
 ```
 
 ## Testing
